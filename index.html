@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!--
+    Link in Bio - Personal Portfolio Page
+    Author: nayandas69
+    GitHub: https://github.com/nayandas69/link-in-bio
+    Email: nayanchandradas@hotmail.com
+    License: MIT
+    
+    IMPORTANT: Please do not remove this author credit comment.
+    You are free to use and modify this code under MIT license,
+    but please keep the author attribution intact.
+-->
+<html lang="en">
+
+<head>
+    <!-- Meta tags for proper document structure and SEO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Nayan Das - Portfolio and social links. Crafting code & content for a connected world.">
+    <meta name="keywords" content="Nayan Das, portfolio, web developer, content creator, social links">
+    <meta name="author" content="Nayan Das">
+
+    <!-- Open Graph meta tags for social media sharing -->
+    <meta property="og:title" content="Link in Bio | Nayan Das">
+    <meta property="og:description" content="Crafting Code & Content for a Connected World">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://socialportal.nayanchandradas.com">
+
+    <!-- Page title -->
+    <title>Link in Bio | Nayan Das</title>
+
+    <!-- Google Fonts - Preload for better performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto+Slab:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.jpg" type="image/jpeg">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="index.css">
+
+    <!-- Theme color for mobile browsers -->
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Prevent zoom on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+
+<body>
+    <!-- Dark Mode Toggle Button -->
+    <div class="theme-toggle" role="button" tabindex="0" aria-label="Toggle dark mode">
+        <i class="fas fa-moon" aria-hidden="true"></i>
+        <i class="fas fa-sun" aria-hidden="true"></i>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Profile Section -->
+        <section class="profile" role="banner">
+            <img src="images/profile.jpg" alt="Nayan Das Profile Picture" class="profile-img">
+            <h1>Nayan Das</h1>
+            <p>Crafting Code & Content for a Connected World</p>
+        </section>
+
+        <!-- Social Links Section -->
+        <section class="social-links" role="navigation" aria-label="Social media links">
+            <div class="link-container">
+                <a href="https://github.com/nayandas69" class="social-link github" target="_blank"
+                    rel="noopener noreferrer" aria-label="Visit my GitHub profile">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+                <div class="hover-card" role="tooltip">Check out my GitHub</div>
+            </div>
+
+            <div class="link-container">
+                <a href="https://patreon.com/NayanDas69" class="social-link patreon" target="_blank"
+                    rel="noopener noreferrer" aria-label="Support me on Patreon">
+                    <i class="fab fa-patreon" aria-hidden="true"></i>
+                </a>
+                <div class="hover-card" role="tooltip">Support me on Patreon</div>
+            </div>
+
+            <div class="link-container">
+                <a href="https://youtube.com/@dasnayan69" class="social-link youtube" target="_blank"
+                    rel="noopener noreferrer" aria-label="Subscribe to my YouTube channel">
+                    <i class="fab fa-youtube" aria-hidden="true"></i>
+                </a>
+                <div class="hover-card" role="tooltip">Subscribe to my YouTube channel</div>
+            </div>
+
+            <div class="link-container">
+                <a href="https://discord.gg/skHyssu" class="social-link discord" target="_blank"
+                    rel="noopener noreferrer" aria-label="Join my Discord server">
+                    <i class="fab fa-discord" aria-hidden="true"></i>
+                </a>
+                <div class="hover-card" role="tooltip">Join my Discord server</div>
+            </div>
+
+            <div class="link-container">
+                <a href="https://nayanchandradas.com" class="social-link website" target="_blank"
+                    rel="noopener noreferrer" aria-label="Visit my website">
+                    <i class="fas fa-briefcase" aria-hidden="true"></i>
+                </a>
+                <div class="hover-card" role="tooltip">Visit my Website</div>
+            </div>
+
+            <div class="link-container">
+                <a href="mailto:nayanchandradas@hotmail.com" class="social-link email" aria-label="Send me an email">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                </a>
+                <div class="hover-card" role="tooltip">Email me</div>
+            </div>
+        </section>
+
+        <!-- Blog Section with Carousel -->
+        <section class="blog-section" role="region" aria-label="Latest blog posts">
+            <h2>Latest Blogs</h2>
+            <div class="carousel-container">
+                <!-- Blog carousel will be populated by JavaScript -->
+                <div class="blog-carousel" role="list" aria-label="Blog posts carousel">
+                    <!-- Blog items will be dynamically added here -->
+                </div>
+
+                <!-- Carousel navigation dots -->
+                <div class="carousel-dots" role="tablist" aria-label="Carousel navigation">
+                    <!-- Dots will be dynamically added here -->
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Blog Modal Popup -->
+    <div id="blogModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="blogTitle" aria-hidden="true">
+        <div class="modal-content">
+            <!-- Close button -->
+            <span class="close" role="button" tabindex="0" aria-label="Close modal">&times;</span>
+
+            <!-- Modal content -->
+            <h2 id="blogTitle"></h2>
+            <p>by <strong><a href="https://youtube.com/@dasnayan69" target="_blank"
+                        rel="noopener noreferrer">dasnayan69</a></strong></p>
+
+            <!-- Video container -->
+            <div id="blogVideo" aria-label="Blog video content"></div>
+
+            <!-- Blog description -->
+            <p id="blogDescription"></p>
+        </div>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="index.js"></script>
+</body>
+
+</html>

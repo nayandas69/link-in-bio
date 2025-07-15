@@ -1,0 +1,688 @@
+/**
+ * Link in Bio - Personal Portfolio Page Styles
+ * Author: nayandas69
+ * GitHub: https://github.com/nayandas69/link-in-bio
+ * Email: nayanchandradas@hotmail.com
+ * License: MIT
+ * Description: Modern glassmorphism design with dark mode support
+ * 
+ * IMPORTANT: Please do not remove this author credit comment.
+ * You are free to use and modify this code under MIT license,
+ * but please keep the author attribution intact.
+ */
+
+/* ===== RESET AND BASE STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Smooth scrolling for better user experience */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ===== SCROLLBAR CUSTOMIZATION ===== */
+/* Firefox scrollbar */
+body {
+    scrollbar-width: thin;
+    scrollbar-color: #888 transparent;
+}
+
+/* Webkit browsers (Chrome, Safari, Edge) scrollbar */
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+    border: none;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+/* ===== MAIN BODY STYLES ===== */
+body {
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* Parallax effect */
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: auto;
+}
+
+/* ===== DARK MODE STYLES ===== */
+/* Dark mode maintains the same background but changes container opacity */
+body.dark-mode {
+    background-color: transparent;
+}
+
+/* Dark mode container with enhanced glassmorphism */
+body.dark-mode .container {
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px);
+}
+
+/* Dark mode text colors */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode p {
+    color: #dddddd;
+}
+
+/* Dark mode modal styles */
+body.dark-mode .modal-content {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode .modal-content h2 {
+    color: #f5f5f5;
+}
+
+body.dark-mode .modal-content p {
+    color: #cccccc;
+}
+
+body.dark-mode .modal-content .close {
+    color: #ffffff;
+}
+
+body.dark-mode .modal-content .close:hover {
+    color: #ff4444;
+}
+
+/* Dark mode blog items */
+body.dark-mode .blog-item {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .blog-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Dark mode carousel dots */
+body.dark-mode .carousel-dot {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+body.dark-mode .carousel-dot.active {
+    background-color: #ffffff;
+}
+
+/* ===== MAIN CONTAINER ===== */
+.container {
+    width: 90%;
+    max-width: 400px;
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Container hover effect */
+.container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== PROFILE SECTION ===== */
+.profile {
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+    object-fit: cover;
+    /* Ensure proper image scaling */
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Typography */
+h1,
+h2 {
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+    color: #ffffff;
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+/* ===== SOCIAL LINKS SECTION ===== */
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.link-container {
+    position: relative;
+}
+
+.social-link {
+    padding: 8px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 16px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Social link hover effects */
+.social-link:hover {
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    color: #ffffff !important;
+}
+
+.social-link:active {
+    transform: translateY(-1px) scale(1.05);
+}
+
+/* Hover card tooltip */
+.hover-card {
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    width: 160px;
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #333;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 8px 12px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    font-size: 12px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    text-align: center;
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* Arrow for hover card */
+.hover-card::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: rgba(255, 255, 255, 0.95);
+}
+
+/* Dark mode hover card styles */
+body.dark-mode .hover-card {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Dark mode arrow for hover card */
+body.dark-mode .hover-card::after {
+    border-top-color: rgba(0, 0, 0, 0.9);
+}
+
+.link-container:hover .hover-card {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* ===== INDIVIDUAL SOCIAL PLATFORM COLORS ===== */
+.social-link.github {
+    background: linear-gradient(135deg, #333, #24292e);
+}
+
+.social-link.patreon {
+    background: linear-gradient(135deg, #f96854, #ff5441);
+}
+
+.social-link.youtube {
+    background: linear-gradient(135deg, #ff0000, #cc0000);
+}
+
+.social-link.discord {
+    background: linear-gradient(135deg, #7289da, #5865f2);
+}
+
+.social-link.website {
+    background: linear-gradient(135deg, #555, #333);
+}
+
+.social-link.email {
+    background: linear-gradient(135deg, #c71610, #a01208);
+}
+
+/* ===== BLOG SECTION ===== */
+.blog-section {
+    margin-top: 30px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.blog-section h2 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* ===== CAROUSEL CONTAINER ===== */
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 12px;
+}
+
+.blog-carousel {
+    display: flex;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===== BLOG ITEMS ===== */
+.blog-item {
+    min-width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #ffffff;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.blog-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.blog-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.blog-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Blog item text (initially hidden) */
+.blog-item h3,
+.blog-item p {
+    display: none;
+}
+
+/* Show title and description on hover with overlay */
+.blog-item:hover h3 {
+    display: block;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ===== CAROUSEL NAVIGATION DOTS ===== */
+.carousel-dots {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.carousel-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 6px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.carousel-dot:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+    transform: scale(1.2);
+}
+
+.carousel-dot.active {
+    background-color: #ffffff;
+    transform: scale(1.3);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* ===== MODAL STYLES ===== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 5% auto;
+    padding: 25px;
+    border: none;
+    width: 90%;
+    max-width: 700px;
+    border-radius: 15px;
+    text-align: left;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-content h2 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.modal-content p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.modal-content a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.modal-content a:hover {
+    text-decoration: underline;
+}
+
+/* Modal close button */
+.modal-content .close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 28px;
+    color: #aaa;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.modal-content .close:hover {
+    color: #000;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Video iframe responsive */
+#blogVideo iframe {
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+/* ===== THEME TOGGLE BUTTON ===== */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px;
+    border-radius: 50%;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+.theme-toggle i {
+    font-size: 16px;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+/* Theme toggle icon visibility */
+body.dark-mode .theme-toggle i.fa-moon {
+    display: none;
+}
+
+body:not(.dark-mode) .theme-toggle i.fa-sun {
+    display: none;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+/* Tablet styles */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .social-link {
+        width: 38px;
+        height: 38px;
+        font-size: 15px;
+    }
+
+    .theme-toggle {
+        width: 36px;
+        height: 36px;
+        padding: 6px;
+    }
+
+    .theme-toggle i {
+        font-size: 14px;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+        padding: 20px;
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .profile-img {
+        width: 80px;
+        height: 80px;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    .social-links {
+        gap: 8px;
+    }
+
+    .social-link {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+        padding: 6px;
+    }
+
+    .blog-item img {
+        height: 150px;
+    }
+
+    .theme-toggle {
+        top: 15px;
+        right: 15px;
+        padding: 6px;
+        width: 32px;
+        height: 32px;
+    }
+
+    .theme-toggle i {
+        font-size: 12px;
+    }
+
+    .modal-content {
+        margin: 15% auto;
+        padding: 15px;
+    }
+
+    .hover-card {
+        width: 140px;
+        font-size: 11px;
+    }
+}
+
+/* ===== ACCESSIBILITY IMPROVEMENTS ===== */
+/* Focus styles for keyboard navigation */
+.social-link:focus,
+.carousel-dot:focus,
+.theme-toggle:focus {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+}
+
+.modal-content .close:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
+
+/* Reduced motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .container {
+        border: 2px solid #ffffff;
+    }
+
+    .social-link {
+        border: 1px solid #ffffff;
+    }
+}
