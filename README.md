@@ -1,3 +1,18 @@
+> [!CAUTION]
+> 🚨 This project is archived and no longer maintained.
+>
+> This was a static version created with **HTML, CSS, and Vanilla JavaScript** as a "Link in Bio" page. While well-received, development for this site has officially ended.
+
+> [!IMPORTANT]
+> ✅ I've migrated to a new, fully-featured **Next.js version** of this project. View it here:
+> 👉 **[Link in Bio - Next.js Edition](https://github.com/nayandas69/linkinbio-nextjs)**
+
+
+
+
+
+---------------------------
+
 # Link in Bio - Personal Portfolio Page
 
 A modern, responsive "link in bio" page with glassmorphism design, dark mode support, and interactive blog carousel. Perfect for showcasing your social media presence and latest content.
